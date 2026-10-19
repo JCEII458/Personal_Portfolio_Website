@@ -1,6 +1,6 @@
 # Joel C. Escareal II — Professional Portfolio
 
-Personal portfolio website for **Joel C. Escareal II**, Civil Engineer | Structural Engineering Specialist.
+Personal portfolio website for **Joel C. Escareal II**, Civil Engineer | Structural Engineering.
 
 Built with **Next.js 16 (App Router)**, **TypeScript**, **Tailwind CSS 4**, and **Lucide** icons. All pages are statically
 generated except the contact-form API route.
