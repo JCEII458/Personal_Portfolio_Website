@@ -12,6 +12,23 @@
   --color-ink: #1b2738;
   --color-muted: #627187;
 
+  /* Semantic support colours (status notes, badges, form feedback) */
+  --color-blue-soft: #e8f1fb;
+  --color-blue-line: #c9ddf2;
+  --color-eng-blue-hover: #1d5590;
+  --color-warn-bg: #fdf6e7;
+  --color-warn-line: #efdcae;
+  --color-warn-text: #7a5410;
+  --color-warn-ink: #5c3f0b;
+  --color-danger: #b42318;
+  --color-danger-strong: #d92d20;
+  --color-danger-line: #f4c7c3;
+  --color-danger-bg: #fef3f2;
+  --color-danger-ink: #912018;
+  --color-success-line: #b7e0c6;
+  --color-success-bg: #f0faf3;
+  --color-success: #1f7a3f;
+
   --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   --font-display: "Manrope Variable", "Inter Variable", ui-sans-serif, system-ui, sans-serif;
 
@@ -53,6 +70,22 @@
 
   p {
     text-wrap: pretty;
+  }
+
+  /* Tailwind 4 no longer sets a pointer cursor on buttons. */
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  select:not(:disabled),
+  summary,
+  label[for] {
+    cursor: pointer;
+  }
+
+  button:disabled,
+  select:disabled,
+  input:disabled,
+  textarea:disabled {
+    cursor: not-allowed;
   }
 
   :focus-visible {

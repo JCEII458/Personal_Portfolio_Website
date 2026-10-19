@@ -24,7 +24,7 @@ export default function ProjectsPage() {
 
       <section className="bg-surface py-12 sm:py-16" aria-label="Projects">
         <div className="container-page">
-          <div role="note" className="mb-8 rounded-lg border border-[#efdcae] bg-[#fdf6e7] p-4 text-sm leading-relaxed text-[#5c3f0b]">
+          <div role="note" className="mb-8 rounded-lg border border-warn-line bg-warn-bg p-4 text-sm leading-relaxed text-warn-ink">
             <strong className="font-semibold">Portfolio in preparation:</strong> the projects below are illustrative samples with generic titles
             and technical illustrations. They demonstrate the case-study format and will be replaced with publication-approved project records.
           </div>

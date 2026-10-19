@@ -64,12 +64,12 @@ export default function ResearchPage() {
                   aria-current={current ? "step" : undefined}
                   className={cn(
                     "rounded-lg border p-4",
-                    current ? "border-eng-blue bg-[#e8f1fb]" : done ? "border-line bg-surface" : "border-dashed border-line bg-white",
+                    current ? "border-eng-blue bg-blue-soft" : done ? "border-line bg-surface" : "border-dashed border-line bg-white",
                   )}
                 >
                   <p className={cn("font-mono text-xs", current ? "text-eng-blue" : "text-muted")}>Stage {i + 1}</p>
                   <p className={cn("mt-1 text-sm font-bold", current ? "text-navy" : "text-muted")}>{researchStageLabels[s].label}</p>
-                  <p className="mt-1 text-xs leading-relaxed text-muted">{researchStageLabels[s].description}</p>
+                  <p className={cn("mt-1 text-xs leading-relaxed", current ? "text-ink" : "text-muted")}>{researchStageLabels[s].description}</p>
                 </li>
               );
             })}
@@ -98,7 +98,7 @@ export default function ResearchPage() {
               <ol className="space-y-3">
                 {r.objectives.map((o, i) => (
                   <li key={o} className="flex gap-4">
-                    <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-[#e8f1fb] font-mono text-xs font-semibold text-eng-blue">
+                    <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-blue-soft font-mono text-xs font-semibold text-eng-blue">
                       {i + 1}
                     </span>
                     {o}
@@ -197,7 +197,7 @@ export default function ResearchPage() {
             <div className="space-y-6 pt-10 lg:sticky lg:top-28">
               <nav aria-label="Research sections" className="rounded-xl border border-line bg-white p-6">
                 <p className="text-xs font-semibold tracking-wider text-muted uppercase">Contents</p>
-                <ul className="mt-3 space-y-2 text-sm">
+                <ul className="mt-2 text-sm">
                   {[
                     ["background", "Background"],
                     ["problem", "Problem statement"],
@@ -210,7 +210,7 @@ export default function ResearchPage() {
                     ["findings", "Findings"],
                   ].map(([id, label]) => (
                     <li key={id}>
-                      <a href={`#${id}`} className="text-eng-blue hover:text-navy hover:underline">
+                      <a href={`#${id}`} className="inline-block py-1 text-eng-blue hover:text-navy hover:underline">
                         {label}
                       </a>
                     </li>

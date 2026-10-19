@@ -8,7 +8,7 @@ export function CredentialSection({ id, title, icon: Icon, entries, note }: Prop
   return (
     <section aria-labelledby={id} className="rounded-xl border border-line bg-white p-6 shadow-card sm:p-8">
       <div className="flex items-center gap-3">
-        <span className="grid size-10 place-items-center rounded-lg bg-[#e8f1fb] text-eng-blue">
+        <span className="grid size-10 place-items-center rounded-lg bg-blue-soft text-eng-blue">
           <Icon className="size-5" aria-hidden="true" />
         </span>
         <h2 id={id} className="text-xl font-bold">

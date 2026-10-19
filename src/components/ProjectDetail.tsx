@@ -12,7 +12,7 @@ function Block({ id, title, children }: { id: string; title: string; children: R
       <h2 id={id} className="text-2xl font-bold">
         {title}
       </h2>
-      <div className="mt-4 text-[15px] leading-relaxed text-ink sm:text-base">{children}</div>
+      <div className="mt-4 text-base leading-relaxed text-ink">{children}</div>
     </section>
   );
 }
@@ -23,7 +23,7 @@ function List({ items, ordered = false }: { items: string[]; ordered?: boolean }
       <ol className="space-y-3">
         {items.map((item, i) => (
           <li key={item} className="flex gap-4">
-            <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-[#e8f1fb] font-mono text-xs font-semibold text-eng-blue">
+            <span className="mt-0.5 grid size-6 shrink-0 place-items-center rounded-full bg-blue-soft font-mono text-xs font-semibold text-eng-blue">
               {i + 1}
             </span>
             <span>{item}</span>
@@ -60,13 +60,13 @@ export function ProjectDetail({ project }: { project: Project }) {
           <nav aria-label="Breadcrumb">
             <ol className="flex flex-wrap items-center gap-2 text-sm text-white/60">
               <li>
-                <Link href="/projects" className="hover:text-white">
+                <Link href="/projects" className="inline-block py-1 hover:text-white">
                   Projects
                 </Link>
               </li>
               <li aria-hidden="true">/</li>
               <li>
-                <Link href={`/projects?category=${project.category}`} className="hover:text-white">
+                <Link href={`/projects?category=${project.category}`} className="inline-block py-1 hover:text-white">
                   {category?.shortLabel}
                 </Link>
               </li>
@@ -131,7 +131,7 @@ export function ProjectDetail({ project }: { project: Project }) {
                   role="note"
                   className={
                     project.disclosureStatus === "illustrative-sample"
-                      ? "rounded-xl border border-[#efdcae] bg-[#fdf6e7] p-6"
+                      ? "rounded-xl border border-warn-line bg-warn-bg p-6"
                       : "rounded-xl border border-line bg-white p-6"
                   }
                 >

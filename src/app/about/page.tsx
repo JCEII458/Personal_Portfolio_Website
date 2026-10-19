@@ -38,7 +38,7 @@ export default function AboutPage() {
               </ul>
               <nav aria-label="On this page" className="mt-6 border-t border-line pt-4">
                 <p className="text-xs font-semibold tracking-wider text-muted uppercase">On this page</p>
-                <ul className="mt-2 space-y-1.5 text-sm">
+                <ul className="mt-2 text-sm">
                   {[
                     ["intro", "Professional introduction"],
                     ...sections.map((s) => [s.id, s.title]),
@@ -47,7 +47,7 @@ export default function AboutPage() {
                     ["objectives", "Career objectives"],
                   ].map(([id, label]) => (
                     <li key={id}>
-                      <a href={`#${id}`} className="text-eng-blue hover:text-navy hover:underline">
+                      <a href={`#${id}`} className="inline-block py-1 text-eng-blue hover:text-navy hover:underline">
                         {label}
                       </a>
                     </li>

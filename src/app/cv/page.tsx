@@ -40,7 +40,7 @@ export default function CvPage() {
                   </ButtonLink>
                 </>
               ) : (
-                <div role="note" className="mt-4 rounded-lg border border-[#efdcae] bg-[#fdf6e7] p-4 text-sm text-[#5c3f0b]">
+                <div role="note" className="mt-4 rounded-lg border border-warn-line bg-warn-bg p-4 text-sm text-warn-ink">
                   <p className="flex items-center gap-2 font-semibold">
                     <TriangleAlert className="size-4" aria-hidden="true" /> CV not yet uploaded
                   </p>

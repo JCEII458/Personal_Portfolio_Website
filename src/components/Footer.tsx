@@ -18,16 +18,16 @@ export function Footer() {
 
         <nav aria-label="Footer" className="md:col-span-3">
           <h2 className="text-xs font-semibold tracking-[0.18em] text-white/50 uppercase">Navigate</h2>
-          <ul className="mt-4 grid grid-cols-2 gap-x-6 gap-y-2.5 text-sm">
+          <ul className="mt-3 grid grid-cols-2 gap-x-6 text-sm">
             {navigation.map((item) => (
               <li key={item.href}>
-                <Link href={item.href} className="transition-colors hover:text-white">
+                <Link href={item.href} className="inline-block min-w-6 py-1.5 transition-colors hover:text-white">
                   {item.label}
                 </Link>
               </li>
             ))}
             <li>
-              <Link href="/cv" className="transition-colors hover:text-white">
+              <Link href="/cv" className="inline-block min-w-6 py-1.5 transition-colors hover:text-white">
                 CV
               </Link>
             </li>
@@ -62,7 +62,7 @@ export function Footer() {
               <span>{location}</span>
             </li>
           </ul>
-          <Link href="/contact" className="mt-6 inline-flex text-sm font-semibold text-white underline decoration-accent underline-offset-4 hover:decoration-white">
+          <Link href="/contact" className="mt-5 inline-flex min-h-11 items-center text-sm font-semibold text-white underline decoration-accent underline-offset-4 hover:decoration-white">
             Send a professional inquiry
           </Link>
         </div>

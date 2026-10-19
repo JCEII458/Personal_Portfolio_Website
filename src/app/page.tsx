@@ -148,7 +148,7 @@ export default function HomePage() {
               title="Performance-based seismic research"
               description="Investigating how strengthening existing low-rise buildings changes their probability of collapse during strong earthquakes."
             />
-            <Link href="/research" className="inline-flex shrink-0 items-center gap-1.5 text-sm font-semibold text-eng-blue hover:text-navy">
+            <Link href="/research" className="inline-flex min-h-11 shrink-0 items-center gap-1.5 text-sm font-semibold text-eng-blue hover:text-navy">
               Research page <ArrowRight className="size-4" aria-hidden="true" />
             </Link>
           </div>

@@ -4,10 +4,10 @@ import { cn } from "@/lib/utils";
 type Tone = "blue" | "navy" | "neutral" | "amber" | "on-dark";
 
 const tones: Record<Tone, string> = {
-  blue: "bg-[#e8f1fb] text-eng-blue ring-[#c9ddf2]",
+  blue: "bg-blue-soft text-eng-blue ring-blue-line",
   navy: "bg-navy text-white ring-navy",
   neutral: "bg-surface text-muted ring-line",
-  amber: "bg-[#fdf6e7] text-[#7a5410] ring-[#efdcae]",
+  amber: "bg-warn-bg text-warn-text ring-warn-line",
   "on-dark": "bg-white/10 text-white ring-white/20",
 };
 

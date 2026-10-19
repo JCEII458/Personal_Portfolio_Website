@@ -78,19 +78,19 @@ export function ContactForm({ configured, showSetupHint }: Props) {
 
   const renderError = (field: keyof FieldErrors) =>
     errors[field] ? (
-      <p id={`${field}-error`} className="mt-1.5 flex items-center gap-1.5 text-xs font-medium text-[#b42318]">
+      <p id={`${field}-error`} className="mt-1.5 flex items-center gap-1.5 text-xs font-medium text-danger">
         <CircleAlert className="size-3.5 shrink-0" aria-hidden="true" />
         {errors[field]}
       </p>
     ) : null;
 
   const inputClass = (field: keyof FieldErrors) =>
-    cn(fieldBase, errors[field] ? "border-[#d92d20] focus:border-[#d92d20]" : "border-line focus:border-accent");
+    cn(fieldBase, errors[field] ? "border-danger-strong focus:border-danger-strong" : "border-line focus:border-accent");
 
   if (status.state === "success") {
     return (
-      <div role="status" className="rounded-xl border border-[#b7e0c6] bg-[#f0faf3] p-8 text-center">
-        <CircleCheck className="mx-auto size-10 text-[#1f7a3f]" aria-hidden="true" />
+      <div role="status" className="rounded-xl border border-success-line bg-success-bg p-8 text-center">
+        <CircleCheck className="mx-auto size-10 text-success" aria-hidden="true" />
         <h2 className="mt-4 text-xl font-bold">Thank you — your message has been sent.</h2>
         <p className="mt-2 text-sm text-muted">I review inquiries personally and will reply to the email address you provided.</p>
         <button
@@ -107,7 +107,7 @@ export function ContactForm({ configured, showSetupHint }: Props) {
   return (
     <form ref={formRef} onSubmit={onSubmit} noValidate aria-describedby={!configured ? "form-setup-notice" : undefined}>
       {!configured && (
-        <div id="form-setup-notice" role="note" className="mb-6 flex gap-3 rounded-lg border border-[#efdcae] bg-[#fdf6e7] p-4 text-sm text-[#5c3f0b]">
+        <div id="form-setup-notice" role="note" className="mb-6 flex gap-3 rounded-lg border border-warn-line bg-warn-bg p-4 text-sm text-warn-ink">
           <TriangleAlert className="mt-0.5 size-5 shrink-0" aria-hidden="true" />
           <div>
             <p className="font-semibold">The online inquiry form is not active yet.</p>
@@ -126,14 +126,14 @@ export function ContactForm({ configured, showSetupHint }: Props) {
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
             <label htmlFor="name" className="mb-1.5 block text-sm font-semibold text-ink">
-              Full name <span aria-hidden="true" className="text-[#b42318]">*</span>
+              Full name <span aria-hidden="true" className="text-danger">*</span>
             </label>
             <input id="name" name="name" type="text" autoComplete="name" required maxLength={contactLimits.name} aria-invalid={!!errors.name} aria-describedby={describedBy("name")} className={cn(inputClass("name"), "h-12")} />
             {renderError("name")}
           </div>
           <div>
             <label htmlFor="email" className="mb-1.5 block text-sm font-semibold text-ink">
-              Email address <span aria-hidden="true" className="text-[#b42318]">*</span>
+              Email address <span aria-hidden="true" className="text-danger">*</span>
             </label>
             <input id="email" name="email" type="email" autoComplete="email" required maxLength={contactLimits.email} aria-invalid={!!errors.email} aria-describedby={describedBy("email")} className={cn(inputClass("email"), "h-12")} />
             {renderError("email")}
@@ -150,7 +150,7 @@ export function ContactForm({ configured, showSetupHint }: Props) {
           </div>
           <div>
             <label htmlFor="inquiryType" className="mb-1.5 block text-sm font-semibold text-ink">
-              Inquiry type <span aria-hidden="true" className="text-[#b42318]">*</span>
+              Inquiry type <span aria-hidden="true" className="text-danger">*</span>
             </label>
             <select id="inquiryType" name="inquiryType" required defaultValue="" aria-invalid={!!errors.inquiryType} aria-describedby={describedBy("inquiryType")} className={cn(inputClass("inquiryType"), "h-12")}>
               <option value="" disabled>
@@ -168,7 +168,7 @@ export function ContactForm({ configured, showSetupHint }: Props) {
 
         <div>
           <label htmlFor="message" className="mb-1.5 block text-sm font-semibold text-ink">
-            Message <span aria-hidden="true" className="text-[#b42318]">*</span>
+            Message <span aria-hidden="true" className="text-danger">*</span>
           </label>
           <textarea
             id="message"
@@ -215,7 +215,7 @@ export function ContactForm({ configured, showSetupHint }: Props) {
         </div>
 
         {status.state === "error" && (
-          <div role="alert" className="flex gap-3 rounded-lg border border-[#f4c7c3] bg-[#fef3f2] p-4 text-sm text-[#912018]">
+          <div role="alert" className="flex gap-3 rounded-lg border border-danger-line bg-danger-bg p-4 text-sm text-danger-ink">
             <CircleAlert className="mt-0.5 size-5 shrink-0" aria-hidden="true" />
             <p>{status.message}</p>
           </div>
@@ -227,7 +227,7 @@ export function ContactForm({ configured, showSetupHint }: Props) {
           </p>
           <button
             type="submit"
-            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-eng-blue px-6 text-sm font-semibold text-white transition-colors hover:bg-navy disabled:cursor-not-allowed disabled:bg-muted/60"
+            className="inline-flex min-h-12 items-center justify-center gap-2 rounded-md bg-eng-blue px-6 text-sm font-semibold text-white transition-colors hover:bg-navy disabled:border disabled:border-line disabled:bg-surface disabled:text-muted"
           >
             {status.state === "submitting" ? (
               <>

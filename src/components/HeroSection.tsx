@@ -27,7 +27,7 @@ export function HeroSection() {
           </h1>
 
           <p className="mt-6 max-w-2xl text-base leading-relaxed text-white/85 sm:text-lg">{profile.heroDescription}</p>
-          <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/60 sm:text-base">{profile.heroSupporting}</p>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-white/70">{profile.heroSupporting}</p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <ButtonLink href="/projects" variant="primary" className="bg-accent hover:bg-eng-blue">
@@ -75,7 +75,7 @@ export function HeroSection() {
                 className="aspect-[4/5] w-full object-cover"
               />
               {portrait.isPlaceholder && (
-                <span className="absolute top-3 left-3 rounded bg-navy-deep/85 px-2 py-1 text-[10px] font-semibold tracking-wider text-white uppercase">
+                <span className="absolute top-3 left-3 rounded bg-navy-deep/85 px-2 py-1 text-xs font-semibold tracking-wide text-white uppercase">
                   Portrait placeholder
                 </span>
               )}

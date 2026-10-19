@@ -24,7 +24,7 @@ export function ProjectImage({ image, sizes, priority, className }: Props) {
         className={cn("h-full w-full", image.src.endsWith(".svg") ? "object-contain" : "object-cover")}
       />
       {image.illustrative && (
-        <span className="absolute top-3 left-3 rounded bg-navy-deep/85 px-2 py-1 text-[10px] font-semibold tracking-wider text-white uppercase backdrop-blur-sm">
+        <span className="absolute top-3 left-3 rounded bg-navy-deep/85 px-2 py-1 text-xs font-semibold tracking-wide text-white uppercase backdrop-blur-sm">
           Illustrative
         </span>
       )}

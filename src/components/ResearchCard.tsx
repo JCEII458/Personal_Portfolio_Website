@@ -18,7 +18,7 @@ export function ResearchCard() {
           sizes="(min-width: 1024px) 50vw, 100vw"
           className="h-full w-full object-cover"
         />
-        <span className="absolute top-3 left-3 rounded bg-navy-deep/85 px-2 py-1 text-[10px] font-semibold tracking-wider text-white uppercase">
+        <span className="absolute top-3 left-3 rounded bg-navy-deep/85 px-2 py-1 text-xs font-semibold tracking-wide text-white uppercase">
           Illustrative — not results
         </span>
       </div>

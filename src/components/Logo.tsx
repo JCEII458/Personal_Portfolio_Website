@@ -16,7 +16,7 @@ export function Logo({ onNavigate }: { onNavigate?: () => void }) {
       </span>
       <span className="flex flex-col leading-tight">
         <span className="font-display text-[15px] font-bold text-white">{profile.name}</span>
-        <span className="hidden text-[11px] tracking-wide text-white/60 sm:block">Civil Engineer · Structural Engineering</span>
+        <span className="hidden text-xs tracking-wide text-white/70 sm:block">Civil Engineer · Structural Engineering</span>
       </span>
     </Link>
   );

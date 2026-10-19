@@ -8,7 +8,7 @@ const icons = { structural: Building2, infrastructure: Landmark, management: Cli
 function GroupIcon({ id }: { id: string }) {
   const Icon = icons[id as keyof typeof icons] ?? Building2;
   return (
-    <span className="grid size-12 place-items-center rounded-lg bg-[#e8f1fb] text-eng-blue">
+    <span className="grid size-12 place-items-center rounded-lg bg-blue-soft text-eng-blue">
       <Icon className="size-6" aria-hidden="true" />
     </span>
   );
